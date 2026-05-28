@@ -1,0 +1,60 @@
+import React from 'react'
+import {motion, useScroll, useTransform} from "framer-motion";
+
+const ParallaxBackground = () => {
+    const {scrollYProgress} =useScroll()
+    const mountain3Y = useTransform(scrollYProgress, [0, 0.5], ["0%", "70%"]);
+    const planetsX = useTransform(scrollYProgress, [0, 0.5], ["0%", "-20%"]);
+    const mountain2Y = useTransform(scrollYProgress, [0, 0.5], ["0%", "30%"]);
+    const mountain1Y = useTransform(scrollYProgress, [0, 0.5], ["0%", "0%"]);
+    return (
+        <section>
+            <div className="absolute inset-0 bg-black/40">
+                <div className="relative h-screen overflow-y-hidden">
+                    {/*Background Sky*/}
+                    <div className="absolute inset-0 w-full h-screen -z-50"
+                        style={{
+                            backgroundImage:"url(/assets/sky.jpg)",
+                            backgroundPosition:"bottom",
+                            backgroundSize:"cover",
+                        }}
+                    />
+                    {/*Mountain Layer 3*/}
+                    <motion.div className="absolute -z-40 inset-0"
+                         style={{
+                             backgroundImage:"url(/assets/mountain-3.png)",
+                             backgroundPosition:"bottom",
+                             backgroundSize:"cover",
+                             y: mountain3Y
+                         }}/>
+                    {/*Planets Layers*/}
+                    <motion.div className="absolute -z-30 inset-0"
+                         style={{
+                             backgroundImage:"url(/assets/planets.png)",
+                             backgroundPosition:"bottom",
+                             backgroundSize:"cover",
+                             x: planetsX
+                         }}/>
+                    {/*Mountain Layer 2*/}
+                    <motion.div className="absolute -z-20 inset-0"
+                         style={{
+                             backgroundImage:"url(/assets/mountain-2.png)",
+                             backgroundPosition:"bottom",
+                             backgroundSize:"cover",
+                             y: mountain2Y
+                         }}/>
+                    {/*Mountain Layer 1*/}
+                    <motion.div className="absolute -z-10 inset-0"
+                         style={{
+                             backgroundImage:"url(/assets/mountain-1.png)",
+                             backgroundPosition:"bottom",
+                             backgroundSize:"cover",
+                             y: mountain2Y
+
+                         }}/>
+                </div>
+            </div>
+        </section>
+    )
+}
+export default ParallaxBackground

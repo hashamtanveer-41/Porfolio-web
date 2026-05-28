@@ -1,34 +1,80 @@
 import React from 'react'
 import {FlipWords} from "./FlipWords.jsx";
+import {motion} from "motion/react"
 
 const HeroText = () => {
+    const words = ["Secure", "Modern", "Scalable"];
+    const variants ={
+        hidden: {opacity:0, x:-50},
+        visible: {opacity:1, x:0},
+    }
     return (
         <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
             {/*Desktop View*/}
-            <div className="flex hidden md:flex c-space ">
-                <h1 className="text-4xl font-medium">Hi! I am Hasham Tanveer</h1>
-            </div>
+            <div className="flex-col hidden md:flex c-space ">
+                <motion.h1
+                    className="text-4xl font-medium"
+                    variants={variants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{delay:1}}
+                >Hi! I am Hasham Tanveer</motion.h1>
+
             <div className="flex flex-col items-start">
-                <p className="text-5xl font-medium text-neutral-300 ">A Web Developer <br /> Dedicated to Design
-                </p>
-                <div>
-                    <FlipWords className="text-8xl font-black" words={["Secure", "Modern", "Scalable"]}/>
-                </div>
-                <p className="text-4xl font-medium text-neutral-300">
+                <motion.p className="text-5xl font-medium text-neutral-300 "
+                          variants={variants}
+                          initial="hidden"
+                          animate="visible"
+                          transition={{delay: 1.2}}>A Web Developer <br /> Dedicated to Design
+                </motion.p>
+                <motion.div
+                    variants={variants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{delay: 1.5}}>
+                    <FlipWords className="text-8xl text-white font-black" words={words}/>
+                </motion.div>
+                <motion.p className="text-4xl font-medium text-neutral-300"
+                          variants={variants}
+                          initial="hidden"
+                          animate="visible"
+                          transition={{delay: 1.7}}>
                     Web Apps.
-                </p>
+                </motion.p>
+            </div>
             </div>
             {/*Mobile View */}
             <div className="flex flex-col space-y-6 md:hidden">
-                <p className="text-4xl font-medium">
+                <motion.p className="text-4xl font-medium"
+                          variants={variants}
+                          initial="hidden"
+                          animate="visible"
+                          transition={{delay: 1}}
+                >
                     Hi, I am Hasham Tanveer
-                </p>
+                </motion.p>
                 <div>
-                    <p className="text-5xl font-black text-neutral-300">Building</p>
-                    <p>
-                        <FlipWords   words={["Secure", "Modern", "Scalable"]}/>
-                    </p>
-                    <p className="text-4xl font-black text-neutral-300 ">Web Applications</p>
+                    <motion.p className="text-5xl font-black text-neutral-300"
+                              variants={variants}
+                              initial="hidden"
+                              animate="visible"
+                              transition={{delay: 1.2}}>Building</motion.p>
+                    <motion.div
+                        variants={variants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ delay: 1.5 }}
+                    >
+                        <FlipWords
+                            words={words}
+                            className="font-black text-white text-7xl"
+                        />
+                    </motion.div>
+                    <motion.p className="text-4xl font-black text-neutral-300 "
+                              variants={variants}
+                              initial="hidden"
+                              animate="visible"
+                              transition={{delay: 1.8}}>Web Applications</motion.p>
                 </div>
             </div>
         </div>

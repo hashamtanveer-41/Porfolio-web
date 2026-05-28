@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="container mx-auto max-w-7xl">
         <Navbar />
-          <Hero />
+        <Hero />
       </div>
     </>
   )
