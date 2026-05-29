@@ -1,8 +1,12 @@
 import React from 'react'
+import {Timeline} from "../components/Timeline.jsx";
+import {experiences} from "../constants/index.js";
 
 const Experience = () => {
     return (
-        <div>Experience</div>
+        <div className="w-full">
+            <Timeline data={experiences}/>
+        </div>
     )
 }
 export default Experience
