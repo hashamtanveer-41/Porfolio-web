@@ -4,6 +4,7 @@ import About from "./sections/About.jsx";
 import Projects from "./sections/Projects.jsx";
 import Experience from "./sections/Experience.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
+import Contact from "./sections/Contact.jsx";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Projects />
         <Experience />
         <Testimonials />
-          <section className="min-h-screen" />
+        <Contact />
           <section className="min-h-screen" />
 
       </div>
