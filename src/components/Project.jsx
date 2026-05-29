@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import ProjectDetails from "./ProjectDetails.jsx";
+import {useMediaQuery} from "react-responsive";
 
 const Project = ({title, description, subDescription, href, image, tags, setPreview}) => {
     const [isHidden, setHidden] = useState(false);
+    const isMobile = useMediaQuery({maxWidth: 853})
     return (
         <>
         <div
@@ -14,11 +16,17 @@ const Project = ({title, description, subDescription, href, image, tags, setPrev
             <p className="text-2xl ">
                 {title}
             </p>
-            <div className="flex gap-5 mt-2 text-sand">
-                {tags.map((tag)=>(
-                    <span key={tag.id}>{tag.name}</span>
-                ))}
-            </div>
+                <div className="flex gap-5 mt-2 text-sand">
+                    {isMobile ?
+                        tags.filter(tag => tag.id < 4).map((tag) => (
+                            <span key={tag.id}>{tag.name}</span>
+                        ))
+                        :
+                        tags.map((tag) => (
+                            <span key={tag.id}>{tag.name}</span>
+                        ))
+                    }
+                </div>
             </div>
             <button
                 onClick={()=>setHidden(true)}

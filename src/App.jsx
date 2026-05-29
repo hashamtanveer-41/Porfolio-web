@@ -25,7 +25,7 @@ function App() {
             <section id="work" >
               <Projects />
             </section>
-
+            <Experience />
             <section id="contact" >
               <Contact />
             </section>
