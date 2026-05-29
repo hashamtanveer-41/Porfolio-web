@@ -29,13 +29,13 @@ const Contact = () => {
         e.preventDefault();
         setIsLoading(true);
         try{
-            await emailjs.send("service_pf598ic", "template_3hj2yyp", {
+            await emailjs.send(`${import.meta.env.VITE_EMAILJS_SERVICE_ID}`, `${import.meta.env.VITE_EMAILJS_TEMPLATE_ID}`, {
                 from_name: formData.name,
                 to_name: "Hasham Tanveer",
                 from_email: formData.email,
                 to_email: "hashamtanvr41@gmail.com",
                 message: formData.message
-            }, "0VUjZedpZhD21yFn5")
+            }, `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`)
             setIsLoading(false)
             setFormData({name: "", email:"", message: "",})
             showAlertMessage("success", "Your message has been sent!")
