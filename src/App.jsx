@@ -5,6 +5,7 @@ import Projects from "./sections/Projects.jsx";
 import Experience from "./sections/Experience.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
 import Contact from "./sections/Contact.jsx";
+import Footer from "./sections/Footer.jsx";
 
 
 function App() {
@@ -14,13 +15,12 @@ function App() {
       <div className="container mx-auto max-w-7xl">
         <Navbar />
         <Hero />
-          <About />
+        <About />
         <Projects />
         <Experience />
         <Testimonials />
         <Contact />
-          <section className="min-h-screen" />
-
+        <Footer />
       </div>
     </>
   )

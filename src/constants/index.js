@@ -1,3 +1,7 @@
+import {VscGithub} from "react-icons/vsc";
+import {CiLinkedin} from "react-icons/ci";
+import {FaWhatsapp} from "react-icons/fa";
+
 export const myProjects = [
     {
         id: 1,
@@ -226,18 +230,18 @@ export const myProjects = [
 export const mySocials = [
     {
         name: "WhatsApp",
-        href: "",
-        icon: "/assets/socials/whatsApp.svg",
+        href: "https://api.whatsapp.com/send?phone=923368655135",
+        icon: FaWhatsapp,
     },
     {
         name: "Linkedin",
-        href: "https://www.linkedin.com/in/ali-sanati/",
-        icon: "/assets/socials/linkedIn.svg",
+        href: "https://www.linkedin.com/in/hashamtanveerokara/",
+        icon: CiLinkedin,
     },
     {
-        name: "Instagram",
-        href: "https://www.instagram.com/ali.sanatidev/reels/",
-        icon: "/assets/socials/instagram.svg",
+        name: "Github",
+        href: "https://github.com/hashamtanveer-41",
+        icon: VscGithub,
     },
 ];
 
