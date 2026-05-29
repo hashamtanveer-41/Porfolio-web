@@ -4,7 +4,6 @@ export function FrameWorks() {
     const skills = [
         "auth0",
         "cplusplus",
-        "csharp",
         "css3",
         "git",
         "html5",
@@ -12,6 +11,8 @@ export function FrameWorks() {
         "react",
         "tailwindcss",
         "vitejs",
+        "springboot",
+        "java",
     ];
     return (
         <div className="relative flex h-[15rem] w-full flex-col items-center justify-center ">

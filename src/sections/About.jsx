@@ -32,14 +32,16 @@ const About = () => {
                         <p className="flex items-end text-5xl text-gray-500 ">
                             Code is Craft
                         </p>
-                        <Card style={{rotate: "75deg", top: "30%", left: "20%"}} text="GRASP" containerRef={grid2Container} />
+                        <Card style={{rotate: "75deg", top: "30%", left: "20%"}} text="Development" containerRef={grid2Container} />
                         <Card style={{rotate: "-30deg", top: "60%", left: "45%"}} text="SOLID" containerRef={grid2Container}/>
-                        <Card style={{rotate: "90deg", top: "30%", left: "70%"}} text="Design Patterns" containerRef={grid2Container} />
-                        <Card style={{rotate: "-45deg", top: "55%", left: "0%"}} text="Design Priciples" containerRef={grid2Container}/>
+                        <Card style={{rotate: "90deg", top: "30%", left: "70%"}} text="OOP" containerRef={grid2Container} />
+                        <Card style={{rotate: "-45deg", top: "55%", left: "0%"}} text="DSA" containerRef={grid2Container}/>
                         <Card style={{rotate: "20deg", top: "10%", left: "30%"}} text="SRP" containerRef={grid2Container}/>
-                        <Card style={{rotate: "20deg", top: "70%", left: "70%"}} text="" image="assets/logos/csharp-pink.png" containerRef={grid2Container}/>
-                        <Card style={{rotate: "-45deg", top: "70%", left: "25%"}} text="" image="assets/logos/dotnet-pink.png" containerRef={grid2Container}/>
-                        <Card style={{rotate: "-45deg", top: "5%", left: "10%"}} text="" image="assets/logos/blazor-pink.png" containerRef={grid2Container}/>
+                        <Card style={{rotate: "20deg", top: "70%", left: "70%"}} text="" image="assets/logos/java.svg" containerRef={grid2Container}/>
+                        <Card style={{rotate: "-45deg", top: "70%", left: "25%"}} text="" image="assets/logos/react.svg" containerRef={grid2Container}/>
+                        <Card style={{rotate: "-45deg", top: "5%", left: "10%"}} text="" image="assets/logos/docker.png" containerRef={grid2Container}/>
+                        <Card style={{rotate: "-15deg", top: "25%", left: "13%"}} text="" image="assets/logos/css3.svg" containerRef={grid2Container}/>
+                        <Card style={{rotate: "90deg", top: "30%", left: "70%"}} text="" image="assets/logos/springboot.svg" containerRef={grid2Container} />
                     </div>
                 </div>
                 {/*Grid 3*/}

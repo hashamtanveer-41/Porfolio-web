@@ -7,23 +7,34 @@ import Testimonials from "./sections/Testimonials.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
 
-
 function App() {
-
   return (
-    <>
-      <div className="container mx-auto max-w-7xl">
-        <Navbar />
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Testimonials />
-        <Contact />
-        <Footer />
-      </div>
-    </>
-  )
+      <>
+        <div className="container mx-auto max-w-7xl">
+          <Navbar />
+
+          <main>
+            <header id="home" >
+              <Hero />
+            </header>
+
+            <section id="about" >
+              <About />
+            </section>
+
+            <section id="work" >
+              <Projects />
+            </section>
+
+            <section id="contact" >
+              <Contact />
+            </section>
+          </main>
+
+          <Footer />
+        </div>
+      </>
+  );
 }
 
 export default App;
